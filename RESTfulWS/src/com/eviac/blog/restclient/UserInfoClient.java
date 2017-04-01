@@ -23,7 +23,7 @@ public static void main(String[] args) {
  
 String name = "Pavithra";
 int age = 25;
- 
+       
 ClientConfig config = new DefaultClientConfig();
 Client client = Client.create(config);
 WebResource resource = client.resource(BASE_URI);
@@ -32,7 +32,7 @@ WebResource nameResource = resource.path("rest").path(PATH_NAME + name);
 System.out.println("Client Response \n"
 + getClientResponse(nameResource));
 System.out.println("Response \n" + getResponse(nameResource) + "\n\n");
- 
+System.out.println();
 WebResource ageResource = resource.path("rest").path(PATH_AGE + age);
 System.out.println("Client Response \n"
 + getClientResponse(ageResource));
